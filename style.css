@@ -265,7 +265,61 @@ h1 {
 /* =========================
    UNIQUE EMOJI ANIMATIONS
    ========================= */
+/* ===== DAY / NIGHT BUTTON ===== */
 
+.theme-toggle {
+  position: fixed !important;
+
+  top: 20px !important;
+  left: 50% !important;
+
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 52px !important;
+  height: 52px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: translateX(-50%) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  z-index: 99999 !important;
+
+  border-radius: 50% !important;
+  border: 1px solid #00f7ff !important;
+
+  background: #050b1c !important;
+
+  color: white !important;
+
+  font-size: 23px !important;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 10px #00f7ff,
+    0 0 25px rgba(0, 247, 255, 0.35);
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateX(-50%) scale(1.1) !important;
+
+  box-shadow:
+    0 0 15px #00f7ff,
+    0 0 35px rgba(0, 247, 255, 0.5);
+}
+
+.theme-toggle:active {
+  transform: translateX(-50%) scale(0.9) !important;
+}
 ./* =========================
    ABOUT ME EMOJI ANIMATIONS
    ========================= */
