@@ -746,5 +746,29 @@ h1 {
 .theme-toggle {
   z-index: 10;
 }
+/* ===== LIGHT MODE ===== */
 
+body.light-mode {
+  background: #f2f7ff !important;
+  color: #111 !important;
+}
+
+body.light-mode .card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #111 !important;
+}
+
+body.light-mode .about-box {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #111 !important;
+}
+
+body.light-mode .theme-toggle {
+  background: #ffffff !important;
+  color: #111 !important;
+  border-color: #008cff !important;
+  box-shadow:
+    0 0 10px #008cff,
+    0 0 25px rgba(0, 140, 255, 0.35);
+}
 
