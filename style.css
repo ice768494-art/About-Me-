@@ -789,7 +789,29 @@ body.light-mode .theme-toggle {
 
   color: #ffffff;
 }
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const revealElements = document.querySelectorAll(".scroll-reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  revealElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+});
+</script>
 #liveTime {
   font-size: 20px;
   font-weight: bold;
