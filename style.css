@@ -398,7 +398,165 @@ h1 {
   }
 }
   
+/* =================================
+   ABOUT ME EMOJIS
+   ================================= */
 
+.about-emoji {
+  display: inline-block !important;
+  position: relative;
+  transform-origin: center;
+}
+
+/* 👋 Wave */
+
+.wave-emoji {
+  animation: waveEmoji 1s ease-in-out infinite !important;
+}
+
+@keyframes waveEmoji {
+
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+
+}
+
+
+/* 🚀 Rocket */
+
+.rocket-emoji {
+  animation: rocketEmoji 1.2s ease-in-out infinite !important;
+}
+
+@keyframes rocketEmoji {
+
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-8deg);
+  }
+
+}
+
+
+/* 💻 Laptop */
+
+.laptop-emoji {
+  animation: laptopEmoji 1s ease-in-out infinite !important;
+}
+
+@keyframes laptopEmoji {
+
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+}
+
+
+/* 🎬 Movie */
+
+.movie-emoji {
+  animation: movieEmoji 2s linear infinite !important;
+}
+
+@keyframes movieEmoji {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ✨ Star */
+
+.star-emoji {
+  animation: starEmoji 0.8s ease-in-out infinite !important;
+}
+
+@keyframes starEmoji {
+
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+}
+
+
+/* 🧠 Brain */
+
+.brain-emoji {
+  animation: brainEmoji 1s ease-in-out infinite !important;
+}
+
+@keyframes brainEmoji {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+
+/* ❤️ Heart */
+
+.heart-emoji {
+  animation: heartEmoji 1s ease-in-out infinite !important;
+}
+
+@keyframes heartEmoji {
+
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.35);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+}
 
 
 
