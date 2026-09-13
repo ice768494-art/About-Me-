@@ -238,3 +238,27 @@ h1 {
   color: var(--muted);
   font-size: 12px;
 }
+/* Moving emojis */
+.link-btn span:last-child {
+  display: inline-block;
+  animation: emojiFloat 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes emojiFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-8deg) scale(1.08);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(8deg) scale(1.08);
+  }
+}
