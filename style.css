@@ -611,6 +611,140 @@ h1 {
   }
 
 }
+/* =================================
+   ANIMATED NEON BACKGROUND
+   ================================= */
 
+.neon-bg {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.neon-bg span {
+  position: absolute;
+
+  display: block;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #00f7ff;
+
+  box-shadow:
+    0 0 8px #00f7ff,
+    0 0 18px #00f7ff,
+    0 0 35px rgba(0, 247, 255, 0.7);
+
+  animation: neonFloat linear infinite;
+}
+
+/* Different particle positions */
+
+.neon-bg span:nth-child(1) {
+  left: 8%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.neon-bg span:nth-child(2) {
+  left: 18%;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.neon-bg span:nth-child(3) {
+  left: 30%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.neon-bg span:nth-child(4) {
+  left: 43%;
+  animation-duration: 13s;
+  animation-delay: 4s;
+}
+
+.neon-bg span:nth-child(5) {
+  left: 55%;
+  animation-duration: 10s;
+  animation-delay: 3s;
+}
+
+.neon-bg span:nth-child(6) {
+  left: 67%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+}
+
+.neon-bg span:nth-child(7) {
+  left: 76%;
+  animation-duration: 9s;
+  animation-delay: 5s;
+}
+
+.neon-bg span:nth-child(8) {
+  left: 85%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+}
+
+.neon-bg span:nth-child(9) {
+  left: 93%;
+  animation-duration: 10s;
+  animation-delay: 6s;
+}
+
+.neon-bg span:nth-child(10) {
+  left: 50%;
+  animation-duration: 15s;
+  animation-delay: 7s;
+}
+
+/* Floating animation */
+
+@keyframes neonFloat {
+
+  0% {
+    top: 110%;
+    opacity: 0;
+    transform: translateX(0) scale(.5);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(40px) scale(1);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    top: -10%;
+    opacity: 0;
+    transform: translateX(-40px) scale(.5);
+  }
+}
+
+/* Keep website content above particles */
+
+.card,
+.theme-toggle {
+  z-index: 10;
+}
 
 
