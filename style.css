@@ -262,3 +262,70 @@ h1 {
     transform: translateY(-4px) rotate(8deg) scale(1.08);
   }
 }
+/* =========================
+   UNIQUE EMOJI ANIMATIONS
+   ========================= */
+
+.emoji {
+  display: inline-block;
+  font-size: 22px;
+}
+
+/* 🚀 Flying */
+.fly {
+  animation: fly 1.8s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(5px, -7px) rotate(12deg);
+  }
+}
+
+/* ✨ Sparkling */
+.sparkle {
+  animation: sparkle 1.2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35) rotate(15deg);
+    opacity: .65;
+  }
+}
+
+/* 🔥 Jumping */
+.jump {
+  animation: jump .9s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 💫 Spinning */
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+}
