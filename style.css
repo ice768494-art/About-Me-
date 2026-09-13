@@ -379,3 +379,135 @@ h1 {
   }
 }
 }
+/* =========================
+   MOVING ABOUT ME EMOJIS
+   ========================= */
+
+.about-emoji {
+  display: inline-block;
+  font-style: normal;
+  transform-origin: center;
+}
+
+/* 👋 Waving */
+.wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(18deg);
+  }
+
+  50% {
+    transform: rotate(-12deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+/* 🚀 Bouncing */
+.bounce {
+  animation: bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* 💻 Pulsing */
+.pulse {
+  animation: pulse 1.3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+/* 🎬 Slow spin */
+.spin-slow {
+  animation: spinSlow 3s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✨ Sparkle */
+.sparkle {
+  animation: sparkleAbout 1s ease-in-out infinite;
+}
+
+@keyframes sparkleAbout {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: .65;
+  }
+}
+
+/* 🧠 Jump */
+.jump {
+  animation: jumpAbout .9s ease-in-out infinite;
+}
+
+@keyframes jumpAbout {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ❤️ Heartbeat */
+.heartbeat {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.25);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.18);
+  }
+}
