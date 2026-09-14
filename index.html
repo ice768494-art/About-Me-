@@ -131,39 +131,48 @@ document.addEventListener("DOMContentLoaded", function () {
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-const SUPABASE_URL = "https://pnkaepccqoqzgvmoiyjo.supabase.co/rest/v1/";
-const SUPABASE_KEY = "sb_publishable_j3HwXkJlclWebeyCyPkNNw_pJ_S8QIu";
+document.addEventListener("DOMContentLoaded", async function () {
 
-const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-async function updateVisitorCount() {
   const counter = document.getElementById("visitorCount");
 
+  if (!counter) {
+    console.error("visitorCount element not found");
+    return;
+  }
+
+  counter.textContent = "Connecting...";
+
+  const SUPABASE_URL = "https://pnkaepccqoqzgvmoiyjo.supabase.co/rest/v1/";
+  const SUPABASE_KEY = "sb_publishable_j3HwXkJlclWebeyCyPkNNw_pJ_S8QIu";
+
   try {
+
+    const supabase = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
+
     const { data, error } = await supabase.rpc("add_visitor");
 
     if (error) {
-      console.error("Visitor counter error:", error);
+      console.error("SUPABASE ERROR:", error);
       counter.textContent = "Error";
       return;
     }
 
+    console.log("Visitor count:", data);
+
     counter.textContent = Number(data).toLocaleString();
 
-  } catch (err) {
-    console.error("Connection error:", err);
+  } catch (error) {
+
+    console.error("CONNECTION ERROR:", error);
     counter.textContent = "Error";
+
   }
-}
 
-updateVisitorCount();
+});
 </script>
-
-</body>
-</html>
   
 </body>
 </html>
