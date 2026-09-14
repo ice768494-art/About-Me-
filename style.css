@@ -1004,3 +1004,36 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ============================= */
 /* Anime Floating Emoji Effects  */
 /* ============================= */
+/* Animated emojis inside Currently Building box */
+
+.animated-emoji {
+    display: inline-block;
+    animation: emojiBounce 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.project-card h3 .animated-emoji {
+    animation-delay: 0s;
+}
+
+.project-card a .animated-emoji {
+    animation-delay: 0.3s;
+}
+
+@keyframes emojiBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(-8deg) scale(1.08);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(8deg) scale(1.15);
+    }
+
+    75% {
+        transform: translateY(-4px) rotate(-5deg) scale(1.08);
+    }
+}
