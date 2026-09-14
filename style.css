@@ -834,3 +834,11 @@ document.addEventListener("DOMContentLoaded", function () {
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== TYPING EFFECT ===== */
+
+#typingText {
+  min-height: 45px;
+  text-shadow:
+    0 0 8px #00f7ff,
+    0 0 20px rgba(0, 247, 255, 0.6);
+}
