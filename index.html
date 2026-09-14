@@ -155,20 +155,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     const { data, error } = await supabase.rpc("add_visitor");
 
     if (error) {
-      console.error("SUPABASE ERROR:", error);
-      counter.textContent = "Error";
-      return;
-    }
-
-    console.log("Visitor count:", data);
-
-    counter.textContent = Number(data).toLocaleString();
-
-  } catch (error) {
-
-    console.error("CONNECTION ERROR:", error);
-    counter.textContent = "Error";
-
+  console.error("SUPABASE ERROR:", error);
+  counter.textContent = error.message;
+  return;
+}
   }
 
 });
