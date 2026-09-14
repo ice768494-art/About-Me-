@@ -125,42 +125,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- Your existing Day/Night + Clock scripts are here -->
 
-
-  <!-
-
   <!-- Your existing Day/Night + Clock scripts are here -->
 
 
-  <!-- STEP 4: SUPABASE -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!<script>
+async function updateVisitorCount() {
+  const counter = document.getElementById("visitorCount");
 
-  <script>
-    const SUPABASE_URL = "https://pnkaepccqoqzgvmoiyjo.supabase.co/rest/v1/";
-    const SUPABASE_KEY = "sb_publishable_j3HwXkJlclWebeyCyPkNNw_pJ_S8QIu";
+  try {
+    const { data, error } = await supabase.rpc("add_visitor");
 
-    const supabase = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_KEY
-    );
-
-    async function updateVisitorCount() {
-      const { data, error } = await supabase.rpc("add_visitor");
-
-      if (error) {
-        console.error("Visitor counter error:", error);
-        document.getElementById("visitorCount").textContent = "—";
-        return;
-      }
-
-      document.getElementById("visitorCount").textContent =
-        Number(data).toLocaleString();
+    if (error) {
+      console.error("Visitor counter error:", error);
+      counter.textContent = "Error";
+      return;
     }
 
-    updateVisitorCount();
-  </script>
+    counter.textContent = Number(data).toLocaleString();
 
-</body>
-</html>
+  } catch (err) {
+    console.error("Connection error:", err);
+    counter.textContent = "Error";
+  }
+}
+
+updateVisitorCount();
+</script>
 </body>
 </html>
   
