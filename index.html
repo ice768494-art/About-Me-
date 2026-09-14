@@ -121,5 +121,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+  </main>
+
+  <!-- Your existing Day/Night + Clock scripts are here -->
+
+
+  <!-
+
+  <!-- Your existing Day/Night + Clock scripts are here -->
+
+
+  <!-- STEP 4: SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    const SUPABASE_URL = "YOUR_PROJECT_URL";
+    const SUPABASE_KEY = "YOUR_PUBLISHABLE_KEY";
+
+    const supabase = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
+
+    async function updateVisitorCount() {
+      const { data, error } = await supabase.rpc("add_visitor");
+
+      if (error) {
+        console.error("Visitor counter error:", error);
+        document.getElementById("visitorCount").textContent = "—";
+        return;
+      }
+
+      document.getElementById("visitorCount").textContent =
+        Number(data).toLocaleString();
+    }
+
+    updateVisitorCount();
+  </script>
+
+</body>
+</html>
+</body>
+</html>
+  
 </body>
 </html>
