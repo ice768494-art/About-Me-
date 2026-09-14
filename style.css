@@ -953,3 +953,51 @@ document.addEventListener("DOMContentLoaded", function () {
     transform: translateY(-8px);
   }
 }
+.project-card {
+    margin: 20px auto;
+    padding: 18px;
+    max-width: 420px;
+    text-align: left;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-status {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+.project-card h3 {
+    margin: 8px 0;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
