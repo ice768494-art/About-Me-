@@ -23,9 +23,6 @@
   </div>
 
   <main class="card">
-    <div class="visitor-box">
-  <div class="visitor-title">👀 Visitors</div>
-  <div id="visitorCount">Loading...</div>
     </div>
     <img class="avatar" src="profile.jpg" alt="Profile picture">
     <h1>Saran</h1>
@@ -128,41 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- Your existing Day/Night + Clock scripts are here -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", async function () {
-
-  const counter = document.getElementById("visitorCount");
-
-  if (!counter) {
-    console.error("visitorCount element not found");
-    return;
-  }
-
-  counter.textContent = "Connecting...";
-
-  const SUPABASE_URL = "https://pnkaepccqoqzgvmoiyjo.supabase.co/rest/v1/";
-  const SUPABASE_KEY = "sb_publishable_j3HwXkJlclWebeyCyPkNNw_pJ_S8QIu";
-
-  try {
-
-    const supabase = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_KEY
-    );
-
-    const { data, error } = await supabase.rpc("add_visitor");
-
-    if (error) {
-  console.error("SUPABASE ERROR:", error);
-  counter.textContent = error.message;
-  return;
-}
-  }
-
-});
-</script>
   
 </body>
 </html>
