@@ -897,3 +897,31 @@ document.addEventListener("DOMContentLoaded", function () {
     opacity: 0;
   }
 }
+/* ===== ANIMATED PROFILE PICTURE ===== */
+
+.profile-img {
+  animation: profileFloat 3s ease-in-out infinite;
+  box-shadow:
+    0 0 12px #00f7ff,
+    0 0 30px rgba(0, 247, 255, 0.55),
+    0 0 60px rgba(0, 247, 255, 0.25);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 0 18px #00f7ff,
+    0 0 40px rgba(0, 247, 255, 0.7),
+    0 0 80px rgba(0, 247, 255, 0.35);
+}
+
+@keyframes profileFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
