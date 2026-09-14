@@ -123,7 +123,47 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- Your existing Day/Night + Clock scripts are here -->
 
   <!-- Your existing Day/Night + Clock scripts are here -->
+<script>
+const typingText = document.getElementById("typingText");
 
+const texts = [
+  "Saran 👋",
+  "Developer 💻",
+  "Creator 🚀",
+  "Anime Lover 🎬"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+  const currentText = texts[textIndex];
+
+  if (!deleting) {
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1500);
+      return;
+    }
+  } else {
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      deleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 60 : 100);
+}
+
+typeEffect();
+</script>
 
 
   
