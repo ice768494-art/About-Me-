@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Links</title>
+    <title>Saran | Developer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         DAY / NIGHT BUTTON
-    ========================== -->
+    <!-- Theme Button -->
     <button
         id="themeToggle"
         class="theme-toggle"
+        type="button"
         aria-label="Toggle theme">
         🌙
     </button>
 
 
-    <!-- =========================
-         BACKGROUND
-    ========================== -->
+    <!-- Background -->
     <div class="neon-bg">
         <span></span>
         <span></span>
@@ -40,27 +36,21 @@
     </div>
 
 
-    <!-- =========================
-         MAIN CARD
-    ========================== -->
+    <!-- Main Card -->
     <main class="card">
 
-        <!-- PROFILE -->
+        <!-- Profile -->
         <img
             class="avatar"
             src="profile.jpg"
-            alt="Profile picture">
+            alt="Saran profile picture">
 
 
-        <!-- =========================
-             TYPING TEXT
-        ========================== -->
+        <!-- Typing Title -->
         <h1 id="typingText"></h1>
 
 
-        <!-- =========================
-             ABOUT ME
-        ========================== -->
+        <!-- About Me -->
         <div class="about-box">
 
             <h2>💬 About Me</h2>
@@ -79,13 +69,17 @@
 
             <p>
                 I'd Like to Watch Animes
-                <span class="about-emoji movie-emoji">🎬</span>,
-                <br>
+                <span class="about-emoji movie-emoji">🎬</span>
+            </p>
+
+            <p>
                 Visited This World On March 15
                 <span class="about-emoji star-emoji">✨</span>
-                <br>
+            </p>
+
+            <p>
                 Studying Grade 12
-                <span class="about-emoji brain-emoji">🧠</span>.
+                <span class="about-emoji brain-emoji">🧠</span>
             </p>
 
             <p>
@@ -96,14 +90,245 @@
         </div>
 
 
-        <!-- =========================
-             CURRENTLY BUILDING
-        ========================== -->
+        <!-- Currently Building -->
         <div class="project-card">
 
             <div class="project-status">
                 <span class="status-dot"></span>
                 Currently Building
+            </div>
+
+            <h3>
+                <span class="animated-emoji">🔥</span>
+                AnimeNetworkTamil
+            </h3>
+
+            <a
+                href="https://my-web-ten-orcin.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span class="animated-emoji">🚀</span>
+                View Project
+
+            </a>
+
+        </div>
+
+
+        <!-- Social Links -->
+        <div class="links">
+
+            <a
+                class="link-btn"
+                href="https://t.me/AboutShinchanTamil"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span>📱 Telegram</span>
+                <span class="emoji fly">🚀</span>
+
+            </a>
+
+
+            <a
+                class="link-btn"
+                href="https://www.instagram.com/saran._95._"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span>📸 Instagram</span>
+                <span class="emoji sparkle">✨</span>
+
+            </a>
+
+
+            <a
+                class="link-btn"
+                href="https://youtube.com/@animenetworktamil95"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span>▶️ YouTube</span>
+                <span class="emoji jump">🔥</span>
+
+            </a>
+
+
+            <a
+                class="link-btn"
+                href="https://about-me-ebon-sigma.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span>🌐 My Website</span>
+                <span class="emoji spin">💫</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- Message -->
+        <p id="message" class="message"></p>
+
+
+        <!-- Footer -->
+        <p class="footer">
+            Made By Me ❤️ •
+            <span id="year"></span>
+        </p>
+
+    </main>
+
+
+    <!-- =================================================
+         TYPING EFFECT
+         ================================================= -->
+
+    <script>
+        (function () {
+
+            const typingText =
+                document.getElementById("typingText");
+
+            if (!typingText) return;
+
+            const texts = [
+                "💻 Web Developer",
+                "🐍 Python Developer",
+                "🤖 Telegram Bot Developer",
+                "🚀 Full-Stack Learner"
+            ];
+
+            let textIndex = 0;
+            let charIndex = 0;
+            let deleting = false;
+
+            function typeEffect() {
+
+                const currentText =
+                    texts[textIndex];
+
+                if (!deleting) {
+
+                    typingText.textContent =
+                        currentText.substring(
+                            0,
+                            charIndex + 1
+                        );
+
+                    charIndex++;
+
+                    if (
+                        charIndex >=
+                        currentText.length
+                    ) {
+
+                        deleting = true;
+
+                        setTimeout(
+                            typeEffect,
+                            1800
+                        );
+
+                        return;
+                    }
+
+                } else {
+
+                    typingText.textContent =
+                        currentText.substring(
+                            0,
+                            charIndex - 1
+                        );
+
+                    charIndex--;
+
+                    if (charIndex <= 0) {
+
+                        charIndex = 0;
+                        deleting = false;
+
+                        textIndex =
+                            (textIndex + 1) %
+                            texts.length;
+                    }
+                }
+
+                setTimeout(
+                    typeEffect,
+                    deleting ? 50 : 90
+                );
+            }
+
+            typeEffect();
+
+        })();
+    </script>
+
+
+    <!-- =================================================
+         THEME TOGGLE
+         ================================================= -->
+
+    <script>
+        (function () {
+
+            const button =
+                document.getElementById("themeToggle");
+
+            if (!button) return;
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document.body.classList.toggle(
+                        "light-mode"
+                    );
+
+                    if (
+                        document.body.classList.contains(
+                            "light-mode"
+                        )
+                    ) {
+
+                        button.textContent = "☀️";
+
+                    } else {
+
+                        button.textContent = "🌙";
+
+                    }
+
+                }
+            );
+
+        })();
+    </script>
+
+
+    <!-- =================================================
+         CURRENT YEAR
+         ================================================= -->
+
+    <script>
+        (function () {
+
+            const year =
+                document.getElementById("year");
+
+            if (year) {
+                year.textContent =
+                    new Date().getFullYear();
+            }
+
+        })();
+    </script>
+
+</body>
+</html>                Currently Building
             </div>
 
             <h3>
