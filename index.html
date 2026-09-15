@@ -361,9 +361,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const typingText = document.getElementById("typingText");
 
       const texts = [
-          "💻 Web Developer",
-          "🐍 Python Developer",
-          "🤖 Telegram Bot Developer",
+          "Saran ⚡",
+          "Developer 💻",
+          "Bot Developer 🤖",
           "🚀 Full-Stack Learner"
       ];
 
@@ -408,6 +408,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
   </script>
+<script>
+const themeToggle = document.getElementById("themeToggle");
 
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeToggle.textContent = "☀️";
+    } else {
+        themeToggle.textContent = "🌙";
+    }
+});
+</script>
 </body>
 </html>
