@@ -135,18 +135,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-  </main>
-
-  <!-- Your existing Day/Night + Clock scripts are here -->
-
-  <!-- Your existing Day/Night + Clock scripts are here -->
-const typingText = document.getElementById("typing-text");
+<script>
+const typingText = document.getElementById("typingText");
 
 const texts = [
     "💻 Web Developer",
     "🐍 Python Developer",
     "🤖 Telegram Bot Developer",
-    "🚀 Full-Stack Learner",
+    "🚀 Full-Stack Learner"
 ];
 
 let textIndex = 0;
@@ -157,7 +153,9 @@ function typeEffect() {
     const currentText = texts[textIndex];
 
     if (!deleting) {
-        typingText.textContent = currentText.substring(0, charIndex + 1);
+        typingText.textContent =
+            currentText.substring(0, charIndex + 1);
+
         charIndex++;
 
         if (charIndex === currentText.length) {
@@ -166,7 +164,9 @@ function typeEffect() {
             return;
         }
     } else {
-        typingText.textContent = currentText.substring(0, charIndex - 1);
+        typingText.textContent =
+            currentText.substring(0, charIndex - 1);
+
         charIndex--;
 
         if (charIndex === 0) {
@@ -179,7 +179,7 @@ function typeEffect() {
 }
 
 typeEffect();
-
+</script>
 
   
 </body>
