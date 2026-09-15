@@ -1037,3 +1037,75 @@ document.addEventListener("DOMContentLoaded", function () {
         transform: translateY(-4px) rotate(-5deg) scale(1.08);
     }
 }
+/* ============================= */
+/* MOBILE RESPONSIVE FIX */
+/* ============================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .main-container,
+    .content,
+    .about-container,
+    .projects-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Stack cards vertically */
+    .about-container,
+    .projects-container,
+    .cards,
+    .grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Prevent cards from becoming wider than screen */
+    .card,
+    .project-card,
+    .about-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Prevent long code/text from pushing page sideways */
+    pre,
+    code {
+        max-width: 100%;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* Long URLs/text */
+    p,
+    a,
+    span {
+        overflow-wrap: anywhere;
+    }
+}
