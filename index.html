@@ -1,109 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Links</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Links</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
 
-  <div class="neon-bg">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  </div>
+    <!-- =========================
+         DAY / NIGHT BUTTON
+    ========================== -->
+    <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle theme">
+        🌙
+    </button>
 
-  <main class="card">
-    </div>
-    <img class="avatar" src="profile.jpg" alt="Profile picture">
-    <h1 id="typingtext"></h1>
-    <div class="about-box">
-  <h2>💬 About Me</h2>
-      
-    Hi I'm Saran
-    <span class="about-emoji wave-emoji">👋</span>
-    <br><br>
 
-    I Like Creating New Things
-    <span class="about-emoji rocket-emoji">🚀</span>
-    and exploring technology
-    <span class="about-emoji laptop-emoji">💻</span>.
-    <br><br>
-
-    I'd Like to Watch Animes
-    <span class="about-emoji movie-emoji">🎬</span>,
-    
-    Visited This World On March 15
-    <span class="about-emoji star-emoji">✨</span>
-    
-    Studying Grade 12
-    <span class="about-emoji brain-emoji">🧠</span>.
-    <br><br>
-
-    Thanks for visiting my page!
-    <span class="about-emoji heart-emoji">❤️</span>
-    
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+    <div class="neon-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <div class="project-card">
-    <div class="project-status">
-        <span class="status-dot"></span>
-        Currently Building
-    </div>
 
-    <h3>
-        <span class="animated-emoji">🔥</span>
-        AnimeNetworkTamil
-    </h3>
+    <!-- =========================
+         MAIN CARD
+    ========================== -->
+    <main class="card">
 
-    <a href="https://my-web-ten-orcin.vercel.app/" target="_blank">
-        <span class="animated-emoji">🚀</span>
-        View Project
-    </a>
-    </div>
+        <!-- PROFILE -->
+        <img
+            class="avatar"
+            src="profile.jpg"
+            alt="Profile picture">
 
-<div class="links">
 
-  <a class="link-btn" href="https://t.me/AboutShinchanTamil" target="_blank" rel="noopener">
-    <span>📱 Telegram</span>
-    <span class="emoji fly">🚀</span>
-  </a>
+        <!-- =========================
+             TYPING TEXT
+        ========================== -->
+        <h1 id="typingText"></h1>
 
-  <a class="link-btn" href="https://www.instagram.com/saran._95._?stkn=MXBqbWJ6ZWxiaHRmNw==" target="_blank" rel="noopener">
-    <span>📸 Instagram</span>
-    <span class="emoji sparkle">✨</span>
-  </a>
 
-  <a class="link-btn" href="https://youtube.com/@animenetworktamil95?si=6oPrpHhliD0nEODj" target="_blank" rel="noopener">
-    <span>▶️ YouTube</span>
-    <span class="emoji jump">🔥</span>
-  </a>
+        <!-- =========================
+             ABOUT ME
+        ========================== -->
+        <div class="about-box">
 
-  <a class="link-btn" href="https://about-me-ebon-sigma.vercel.app/" target="_blank" rel="noopener">
-    <span>🌐 My Website</span>
-    <span class="emoji spin">💫</span>
-  </a>
+            <h2>💬 About Me</h2>
 
-</div>
+            <p>
+                Hi I'm Saran
+                <span class="about-emoji wave-emoji">👋</span>
+            </p>
 
-    <p id="message" class="message"></p>
-    <p class="footer">Made By Me ❤️ • <span id="year"></span></p>
-  </main>
+            <p>
+                I Like Creating New Things
+                <span class="about-emoji rocket-emoji">🚀</span>
+                and exploring technology
+                <span class="about-emoji laptop-emoji">💻</span>.
+            </p>
 
-  <script src="script.js"></script>
-  <script>
-const themeToggle = document.getElementById("themeToggle");
+            <p>
+                I'd Like to Watch Animes
+                <span class="about-emoji movie-emoji">🎬</span>,
+                <br>
+                Visited This World On March 15
+                <span class="about-emoji star-emoji">✨</span>
+                <br>
+                Studying Grade 12
+                <span class="about-emoji brain-emoji">🧠</span>.
+            </p>
 
-themeToggle.addEventListener("click", () => {
+            <p>
+                Thanks for visiting my page!
+                <span class="about-emoji heart-emoji">❤️</span>
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             CURRENTLY BUILDING
+        ========================== -->
+        <div class="project-card">
+
+            <div class="project-status">
+                <span class="status-dot"></span>
+                Currently Building
+            </div>
+
+            <h3>
+                <span class="animated-emoji">🔥</span>
+                AnimeNetworkTamil
+            </h3>
+
+            <a
+                href="https://my-web-ten-orcin.vercel.app/"
+                target="_blank"
+                rel="noopener">
+                <span class="animated-emoji">🚀</span>
+                View Project
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             SOCIAL LINKS
+        ========================== -->
+        <div class="links">
+
+            <a
+                class="link-btn"
+                href="https://t.me/AboutShinchanTamil"
+                target="_blank"
+                rel="noopener">
+
+                <span>📱 Telegram</span>
+                <span class="emoji fly">🚀</span>
+
+            </a>
+
+
+            <a
+                class="link-btn"
+                href="themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 
   if (document.body.classList.contains("light-mode")) {
